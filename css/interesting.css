@@ -1,0 +1,40 @@
+.main__cards-wrapper {
+    max-width: 1620px;
+    margin: auto;
+    columns: 4;
+    
+}
+.main__cards-wrapper .main__card {
+    /* width: 100%; */
+    margin-bottom: 20px;
+    break-inside: avoid;
+}
+.main__cards-wrapper .main__card .main__card-img {
+    max-width: 100%;
+}
+.main__card {
+    
+    width: 390px;
+    background-color: white;
+    border-radius: 50px;
+    text-align: end;
+}
+.main__card-item {
+    margin: auto;
+    margin-top: 10px;
+    width: 320px;
+    text-align: center;
+}
+.main__card-name {
+    margin-top: 5px;
+}
+.main__card-btn {
+    cursor: pointer;
+    padding-right: 40px;
+    padding-top: 20px;
+    padding-bottom: 40px;
+}
+
+.main__card-like-active {
+    background-image: url(../imgs/like_active.png);
+}
