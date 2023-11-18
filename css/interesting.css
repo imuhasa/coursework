@@ -2,7 +2,6 @@
     max-width: 1620px;
     margin: auto;
     columns: 4;
-    
 }
 .main__cards-wrapper .main__card {
     /* width: 100%; */
@@ -13,7 +12,8 @@
     max-width: 100%;
 }
 .main__card {
-    
+    float:left;
+    transition:all 1s;
     width: 390px;
     background-color: white;
     border-radius: 50px;
@@ -37,4 +37,128 @@
 
 .main__card-like-active {
     background-image: url(../imgs/like_active.png);
+}
+
+/* Фильтр карточек */
+.main__filter-input {
+    display: none;
+}
+.main__filter {
+    display: flex;
+}
+.main__filter-text {
+    margin-bottom: 20px;
+}
+.main__filter-label {
+    width: 320px;
+    float:left;
+    text-align:center;
+    background:#ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    color:#222222;
+    padding: 10px 34px ;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    cursor:pointer;
+}
+.main__filter-input[type="radio"][id="books"]:checked + .main__filter-label,
+.main__filter-input[type="radio"][id="articles"]:checked + .main__filter-label,
+.main__filter-input[type="radio"][id="conferences"]:checked + .main__filter-label,
+.main__filter-input[type="radio"][id="toPeoples"]:checked + .main__filter-label,
+.main__filter-input[type="radio"][id="all"]:checked + .main__filter-label {
+    background: #506A80;
+    color: white;
+}
+.main__filter-input[type="radio"][id="books"]:checked ~ .articles, 
+.main__filter-input[type="radio"][id="books"]:checked ~ .conferences,
+.main__filter-input[type="radio"][id="books"]:checked ~ .toPeoples{
+    display: none;
+}
+.main__filter-input[type="radio"][id="articles"]:checked ~ .books,
+.main__filter-input[type="radio"][id="articles"]:checked ~ .conferences,
+.main__filter-input[type="radio"][id="articles"]:checked ~ .toPeoples{
+    display: none;
+}
+.main__filter-input[type="radio"][id="conferences"]:checked ~ .books,
+.main__filter-input[type="radio"][id="conferences"]:checked ~ .articles,
+.main__filter-input[type="radio"][id="conferences"]:checked ~ .toPeoples{
+    display: none;
+}
+.main__filter-input[type="radio"][id="toPeoples"]:checked ~ .books,
+.main__filter-input[type="radio"][id="toPeoples"]:checked ~ .articles,
+.main__filter-input[type="radio"][id="toPeoples"]:checked ~ .conferences{
+    display: none;
+}
+.main__add-card {
+    display: none;
+    width: 390px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    color: #506A80;
+    font-size: 14px;
+    font-family: 'Montserrat Alternates';
+    font-style: normal;
+    font-weight: 500;
+    background-color: #A1D5FF;
+}
+
+/* Модальное окно карточки */
+
+.main__card-modal-page {
+    
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    left: 120px;
+    width: 1620px;
+    background-color: #ffffff;
+    border-radius: 50px;
+
+}
+.main__card-modal-window {
+    display: flex;
+}
+.main__modal-image {
+    width: 546px;
+    height: 544px;
+    border-radius: 50px;
+    margin-left: 117px;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.main__modal-item {
+    margin-left: 80px;
+    margin-bottom: 100px;
+    padding-top: 100px;
+    padding-right: 117px;
+}
+.main__modal-heading, .main__modal-name, .main__modal-text {
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+.main__modal-heading {
+    font-size: 64px;
+}
+.main__modal-name {
+    font-size: 32px;
+}
+.main__modal-text {
+    font-size: 24px;
+}
+.main__modal-btn {
+    padding: 10px 34px;
+    margin-right: 117px;
+    margin-bottom: 100px;
+    align-self: end;
+    border: none;
+    border-radius: 5px;
+    background-color: #A1D5FF;
+    color: #506A80;
+    font-size: 14px;
+    font-family: 'Montserrat Alternates';
+    align-items: end;
 }
