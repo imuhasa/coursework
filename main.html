@@ -4,16 +4,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liro Дневник</title>
+    <link rel="stylesheet" href="./css/reg_auth.css">
     <link rel="stylesheet" href="./css/header.css">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/footer.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Montserrat+Alternates:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="reg__wrapper">
+        <h1 class="reg__heading">Регистрация</h1>
+        <form action="" class="reg__form">
+            <label for="name" class="reg__form-label">
+                ФИО
+                <input class="reg__form-input" type="text" name="fio" placeholder="Введите фамилию, имя и отчество">
+            </label>
+            <label for="name" class="reg__form-label">
+                Логин
+                <input class="reg__form-input" type="text" name="fio" placeholder="Введите логин">
+            </label>
+            <label for="name" class="reg__form-label">
+                Пароль
+                <input class="reg__form-input" type="text" name="fio" placeholder="Введите пароль">
+            </label>
+        </form>
+        <button class="reg__sub-btn" type="submit">Зарегистрироваться</button>
+        <p class="reg__text">Вы уже есть у нас? <span class="reg__text-bold">Авторизоваться</span></p>
+    </div>
+    <div class="auth__wrapper">
+        <h1 class="auth__heading">Авторизация</h1>
+        <form action="" class="auth__form">
+            <label for="name" class="auth__form-label">
+                Логин
+                <input class="auth__form-input" type="text" name="fio" placeholder="Введите логин">
+            </label>
+            <label for="name" class="auth__form-label">
+                Пароль
+                <input class="auth__form-input" type="text" name="fio" placeholder="Введите пароль">
+            </label>
+        </form>
+        <button class="auth__sub-btn" type="submit">Войти</button>
+        <p class="auth__text">Нет аккаунта? <span class="auth__text-bold">Зарегистрироваться</span></p>
+    </div>
     <div class="wrapper">
+        
 
         <!-- HEADER -->
 
@@ -139,6 +174,11 @@
                     <li class="footer__item">
                         <a href="https://t.me/AmNyamsLitClub" class="footer__contact">
                             <img src="../imgs/tg.png" alt="" class="footer__img">
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="https://github.com/imuhasa/coursework" class="footer__contact">
+                            <img src="../imgs/github.png" alt="" class="footer__img">
                         </a>
                     </li>
                 </ul>
