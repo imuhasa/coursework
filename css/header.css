@@ -11,20 +11,12 @@ body {
 }
 .wrapper {
     max-width: 1920px;
-    /* filter: blur(10px); */
-    /* Стиль применяется когда пользователь работает с:
-    регистрацией\
-    авторизацией\
-    добавлением карточки (администратором)\
-    просмотром карточки (пользователем)\
-    созданием или редактированием задачи (пользователем)
-    */
+    margin: auto;
 }
 .header{
     background-image: url(../imgs/wallpaper.jpg);
     background-repeat: no-repeat;
     height: 1015px;
-
 }
 .header__nav {
     padding-top: 20px;
@@ -130,4 +122,15 @@ body {
         opacity: 0;
         transform: translate(0,20px) rotate(45deg);
     }
+}
+
+/* Модальное окно добавления карточки для админа */
+.modal__wrapper {
+    background: rgba(0, 0, 0, 0.25);
+    backdrop-filter: blur(10px);
+    z-index: 2;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    display: none;
 }

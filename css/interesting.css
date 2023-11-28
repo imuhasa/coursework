@@ -2,14 +2,16 @@
     max-width: 1620px;
     margin: auto;
     columns: 4;
+
 }
 .main__cards-wrapper .main__card {
     /* width: 100%; */
     margin-bottom: 20px;
     break-inside: avoid;
 }
-.main__cards-wrapper .main__card .main__card-img {
+.main__card, .main__card-img {
     max-width: 100%;
+    border-radius: 50px;
 }
 .main__card {
     float:left;
@@ -18,11 +20,27 @@
     background-color: white;
     border-radius: 50px;
     text-align: end;
+    cursor: pointer;
+
+}
+/* .main__card:hover {
+    .main__admin-block{
+        display: block;
+    }
+} */
+.main__admin-block {
+    display: none;
+    position: relative;
+    right: 35%;
+    margin-bottom: 20px;
+}
+#main__admin-edit, #main__admin-delete{
+    width: 50px;
 }
 .main__card-item {
     margin: auto;
     margin-top: 10px;
-    width: 320px;
+    max-width: 269px;
     text-align: center;
 }
 .main__card-name {
@@ -32,7 +50,7 @@
     cursor: pointer;
     padding-right: 40px;
     padding-top: 20px;
-    padding-bottom: 40px;
+    
 }
 
 .main__card-like-active {
@@ -48,6 +66,9 @@
 }
 .main__filter-text {
     margin-bottom: 20px;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin-top: 40px;
 }
 .main__filter-label {
     width: 320px;
@@ -90,7 +111,6 @@
     display: none;
 }
 .main__add-card {
-    display: none;
     width: 390px;
     margin-bottom: 20px;
     border: none;
@@ -103,20 +123,24 @@
     font-weight: 500;
     background-color: #A1D5FF;
 }
+.main__add-card:hover {
+    background-color: #506A80;
+    color: white;
+}
 
 /* Модальное окно карточки */
 
 .main__card-modal-page {
-    
-    display: none;
     flex-direction: column;
-    position: absolute;
-    z-index: 1;
+    align-items: end;
+    position: fixed;
+    top: 5%;
+    z-index: 3;
     left: 120px;
     width: 1620px;
     background-color: #ffffff;
     border-radius: 50px;
-
+    display: none;
 }
 .main__card-modal-window {
     display: flex;
@@ -148,17 +172,160 @@
 }
 .main__modal-text {
     font-size: 24px;
+    margin-top: 20px;
+}
+.main__modal-text::before {
+    content: 'Описание';
+    display: block;
+    margin-bottom: 10px;
+    color: #BFBFBF;
+    
 }
 .main__modal-btn {
     padding: 10px 34px;
     margin-right: 117px;
     margin-bottom: 100px;
-    align-self: end;
     border: none;
     border-radius: 5px;
     background-color: #A1D5FF;
     color: #506A80;
     font-size: 14px;
     font-family: 'Montserrat Alternates';
-    align-items: end;
+    
+}
+
+.create__card-modal {
+    position: fixed;
+    margin: auto;
+    display: flex;
+    top: 50px;
+    left: 12%;
+    flex-direction: column;
+    align-items: center;
+    background-color: #EDF7FF;
+    border-radius: 50px;
+    z-index: 2;
+    display: none;
+}
+.create__card-heading {
+    font-size: 32px;
+    text-align: center;
+    margin: 40px 0;
+}
+.create__form-container {
+    display: flex;
+    flex-direction: column;
+}
+.create__form-wrapper {
+    display: flex;
+    flex-direction: row;
+}
+.create__label {
+    display: flex;
+    flex-direction: column; 
+}
+#create__author-name, #create__card-name, textarea[name="description"] {
+    padding: 10px 20px;
+    font-family: 'Montserrat Alternates';
+    color: #506A80;
+    border-radius: 5px;
+    border: 1px solid #A1D5FF;
+    font-size: 16px;
+    margin-top: 20px;
+    width: 547px;
+}
+textarea[name="description"] {
+    position: relative;
+    max-width: 547px;
+    height: 280px;
+}
+.create-card__desc::before {
+    content: '';
+    position: relative;
+    left: -50px;
+    top: 50px;
+    display: block;
+    background-image: url(../imgs/description-icon-before.png);
+    width: 25px;
+    height: 17px;
+}
+.create-card__label, #create-card__card-name-link, #create-card__author-name-link {
+    padding: 10px 20px;
+    font-family: 'Montserrat Alternates';
+    background-color: #fff;
+    color: #506A80;
+    border-radius: 5px;
+    border: 1px solid #fff;
+    border-bottom: 1px solid #A1D5FF;
+    font-size: 16px;
+    width: 547px;
+    margin-top: 20px;
+}
+.create-card__input:checked + .create-card__label {
+    background: #506A80;
+    color: white;
+}
+
+.create-card__input {
+    display: none;
+}
+.input-file {
+	position: relative;
+	display: inline-block;
+    margin-top: 20px;
+
+}
+.input-file span {
+	position: relative;
+	display: inline-block;
+	cursor: pointer;
+	outline: none;
+	text-decoration: none;
+	font-size: 16px;
+	vertical-align: middle;
+	text-align: center;
+	border-radius: 5px;
+	background-color: #A1D5FF;
+    color: #506A80;
+	line-height: 22px;
+    padding: 10px 20px;
+    width: 100%;
+	box-sizing: border-box;
+	border: none;
+	margin: 0;
+	transition: background-color 0.2s;
+}
+.input-file input[type=file] {
+	position: absolute;
+	z-index: -1;
+	opacity: 0;
+	display: block;
+	height: 0;
+}
+/* Hover/active */
+.input-file:hover span, .create__btn-submit:hover {
+	background-color: #506A80;
+    color: #fff;
+}
+/* Disabled */
+.input-file input[type=file]:disabled + span {
+	background-color: #eee;
+}
+.create__btn-submit {
+    margin: 40px auto;
+    padding: 10px 20px;
+    width: 547px;
+    background-color: #A1D5FF;
+    color: #506A80;
+	font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Montserrat Alternates';
+}
+.main__card-author, .main__card-name {
+    text-decoration: none;
+    color: #506A80;
+}
+.main__card-author:hover, .main__card-name:hover {
+    color: black;
 }

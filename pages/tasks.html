@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/tasks.css">
+    <link rel="stylesheet" href="../css/footer.css">
+    <script src="../js/script.js" type="module"></script>
+    
+</head>
+<body>
+    <div class="modal__wrapper"></div>
+    <div class="modal__new-task">
+        <h1 class="modal__new-heading">Новая задача</h1>
+        <label class="modal__task-name-label">
+            <input type="text" placeholder="Название задачи:" name="new-task-name" class="modal__task-input">
+        </label>
+        <label class="modal__task-description-label">
+            <input type="text" placeholder="Описание:" name="new-task-desc" class="modal__task-input">
+        </label>
+        <div class="modal__check-list">
+            <p class="modal__check-heading">Чек-лист</p>
+            <ul class="modal__new-task-list">
+                <li class="modal__new-task-item">
+                    <div class="modal__item-wrapper">
+                        <label class="modal__item-label">
+                            <input type="checkbox" class="modal__item-checkbox" name="modal__item-checkbox">
+                        </label>
+                        <p class="modal__item-text">Прочесть главу</p>
+                    </div>
+                    <button class="modal__del-btn">
+                        <img src="../imgs/delIcon.png" alt="удалить задачу" class="del-icon">
+                    </button>
+                </li>
+            </ul>
+            <button class="main__add-img"></button>
+            <p class="main__add-img-text">Добавить элемент</p>
+        </div>
+        <div class="main__buttons">
+            <button class="main__btn-save button">сохранить</button>
+        </div>
+    </div>
+    <div class="modal__edit-task">
+        <h1 class="modal__new-heading">Редактирование</h1>
+        <label class="modal__task-name-label">
+            <input type="text" placeholder="Название задачи:" name="new-task-name" class="modal__task-input">
+        </label>
+        <label class="modal__task-description-label">
+            <input type="text" placeholder="Описание:" name="new-task-desc" class="modal__task-input">
+        </label>
+        <div class="modal__check-list">
+            <p class="modal__check-heading">Чек-лист</p>
+            <ul class="modal__new-task-list">
+                <li class="modal__new-task-item">
+                    <div class="modal__item-wrapper">
+                        <label class="modal__item-label">
+                            <input type="checkbox" class="modal__item-checkbox" name="modal__item-checkbox">
+                        </label>
+                        <p class="modal__item-text">Прочесть главу</p>
+                    </div>
+                    <button class="modal__del-btn">
+                        <img src="../imgs/delIcon.png" alt="удалить задачу" class="del-icon">
+                    </button>
+                </li>
+            </ul>
+            <button class="main__add-img"></button>
+            <p class="main__add-img-text">Добавить элемент</p>
+        </div>
+        <div class="main__buttons">
+            <button class="main__btn-save button">сохранить</button>
+            <button class="main__btn-del button">удалить</button>
+        </div>
+    </div>
+
+    <div class="wrapper">
+
+        <!-- HEADER -->
+
+        <header class="header" style="background-image: url(../imgs/wallpaper_tasks.png); height: 1770px;">
+            <div class="header__nav">
+                <a href="../index.html" class="header__logo-link">
+                    <img src="../imgs/logo.png" alt="Liro Дневник" class="logo">
+                </a>
+                <nav class="header__nav-bar">
+                    <ul class="header__nav-links">
+                        <li class="header__nav-item">
+                            <a href="./interesting.html" class="header__nav-link">Интересное</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="#" class="header__nav-link">Мои задачи</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <button class="header__nav-link">Выйти</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__hello-frame">
+                <h1 class="hello-frame__h1">Мои задачи</h1>
+                <div class="arrow-7">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div class="pre-main">
+                <div class="main__tasks-wrapper">
+                    <div class="main__task-progress">
+                        <h1 class="main__task-heading">В работе</h1>
+                        <div class="main__task-list progress"></div>
+                        <div class="main__add-wrapper">
+                            <button class="main__add-img"></button>
+                            <p class="main__add-text">добавить задачу</p>
+                        </div>
+                    </div>
+                    <div class="main__task-done">
+                        <h1 class="main__task-heading">Выполнено</h1>
+                        <div class="main__task-list done">
+                            <div class="main__task-item">
+                                <p class="main__item-name">Прочесть книгу</p>
+                                <p class="main__item-progress">Процесс выполнения: <span class="main__progress-percentage">100%</span></p>
+                                <img src="../imgs/description-icon-before.png" alt="Описание">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN -->
+
+        
+        <main class="main">
+            <h1 class="main__heading">Избранное</h1>
+            <div class="main__favorites-wrapper">
+                <div class="main__card books">
+                    <img src="../imgs/card_img1.png" alt="" class="main__card-img">
+                    <div class="main__card-item">
+                        <p class="main__card-author">Кейт Феррацци</p>
+                        <h1 class="main__card-name">Никогда не  ешьте в одиночку</h1>
+                    </div>
+                    <div class="main__card-btn">
+                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
+                    </div>
+                </div>
+                <div class="main__card books">
+                    <img src="../imgs/card_img2.png" alt="" class="main__card-img">
+                    <div class="main__card-item">
+                        <p class="main__card-author">Джордж Клейсон</p>
+                        <h1 class="main__card-name">Самый богатый человек в Вавилоне</h1>
+                    </div>
+                    <div class="main__card-btn">
+                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
+                    </div>
+                </div>
+                <div class="main__card books">
+                    <img src="../imgs/card_img3.png" alt="" class="main__card-img">
+                    <div class="main__card-item">
+                        <p class="main__card-author">Джон Кехо</p>
+                        <h1 class="main__card-name">Подсознание может всё!</h1>
+                    </div>
+                    <div class="main__card-btn">
+                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
+                    </div>
+                </div>
+            </div>
+        </main>
+        
+        <!-- FOOTER -->
+
+        <footer class="footer">
+            <div class="footer__nav">
+                <h1 class="footer__heading">Карта</h1>
+                <ul class="footer__nav-links">
+                    <li class="footer__nav-item">
+                        <a href="../index.html" class="footer__nav-link">главная</a>
+                    </li>
+                    <li class="footer__nav-item">
+                        <a href="./interesting.html" class="footer__nav-link">интересное</a>
+                    </li>
+                    <li class="footer__nav-item">
+                        <a href="./tasks.html" class="footer__nav-link">мои задачи</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__logo-liro">
+                <a href="../index.html" class="footer__logo-link">
+                    <img src="../imgs/dark_logo.png" alt="Liro Дневник" class="logo">
+                </a>
+                <p class="footer__liro">© Liro, 2023</p>
+            </div>
+            <div class="footer__contacts">
+                <h1 class="footer__heading">Контакты</h1>
+                <ul class="footer__social">
+                    <li class="footer__item">
+                        <a href="https://vk.com/cercatrovame" class="footer__contact">
+                            <img src="../imgs/vk.png" alt="" class="footer__img">
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="https://t.me/AmNyamsLitClub" class="footer__contact">
+                            <img src="../imgs/tg.png" alt="" class="footer__img">
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="https://github.com/imuhasa/coursework" class="footer__contact">
+                            <img src="../imgs/github.png" alt="" class="footer__img">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -4,29 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liro Интересное</title>
+    <script src="../js/script.js" type="module"></script>
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/interesting.css">
     <link rel="stylesheet" href="../css/footer.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <script src="/like.js" defer></script>
+    
 </head>
 <body>     
+    <div class="modal__wrapper"></div>  
+    
     <div class="main__card-modal-page">
         <div class="main__card-modal-window">
-            <img src="../imgs/card_img1.png" alt="" class="main__modal-image">
+            <img src="/imgs/no_image.png" alt="" class="main__modal-image">
             <div class="main__modal-item">
                 <h1 class="main__modal-heading">Кейт Феррацци</h1>
                 <h3 class="main__modal-name">Никогда не ешьте в одиночку</h3>
                 <p class="main__modal-text">Учитывая ключевые сценарии поведения, глубокий уровень погружения влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Являясь всего лишь частью общей картины, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, призваны к ответу. В своём стремлении повысить качество жизни, они забывают, что синтетическое тестирование позволяет оценить значение поставленных обществом задач.</p>
-    
             </div>
         </div>
-        
         <button class="main__modal-btn">Добавить к себе</button>
+    </div> 
+    <div class="create__card-modal">
+        <h1 class="create__card-heading">
+            Новая карточка
+        </h1>
+        <form class="create__form-container">
+            <div class="create__form-wrapper">
+                <div class="create__label" style="margin-left: 137px; margin-right: 10px;">
+                    <label class="create__names">
+                        <input required type="text" name="author" placeholder="Название автора:" id="create__author-name">
+                    </label>
+                    <label class="create__names">
+                        <input required type="text" name="name" placeholder="Название карточки:" id="create__card-name">   
+                    </label>  
+                    <label class="create-card__desc">
+                        <textarea required name="description" placeholder="Описание:" cols="40" rows="3" id="create__card-desc"></textarea>
+                    </label>
+                    <label class="input-file">
+                           <input type="file" name="file" id="create__card-file">		
+                           <span>Добавить изображение</span>
+                     </label>
+                     <div class="preview-wrapper">
+                        <img class="preview-img">
+                     </div>
+                </div>
+                <div class="create__label" style="margin-right: 100px; margin-left: 10px;">
+                    <label class="create-card__label-link" for="create-card__author-name-link">
+                        <input type="text" placeholder="Добавить ссылку: " name="author-name-link" id="create-card__author-name-link">
+                    </label>
+                    <label class="create-card__label-link" for="create-card__card-name-link">
+                        <input type="text" placeholder="Добавить ссылку: " name="card-name-link" id="create-card__card-name-link">
+                    </label>
+                    <p class="main__filter-text">Категория карточки:</p>
+                    <input required class="create-card__input" type="radio" name="categories" value="books" id="add-books">
+                    <label class="create-card__label" for="add-books">Книги</label>
+                    <input required class="create-card__input" type="radio" name="categories" value="articles" id="add-articles">
+                    <label class="create-card__label" for="add-articles">Статьи</label>
+                    <input required class="create-card__input" type="radio" name="categories" value="conferences" id="add-conferences">
+                    <label class="create-card__label" for="add-conferences">Конференции</label>
+                    <input required class="create-card__input" type="radio" name="categories" value="toPeoples" id="add-toPeoples">
+                    <label class="create-card__label" for="add-toPeoples">Знаменитости</label>
+                </div>
 
-    </div>   
+            </div>
+            <button class="create__btn-submit">
+                Сохранить
+            </button>
+        </form>
+    </div>
 
     <div class="wrapper">
 
@@ -34,7 +82,7 @@
 
         <header class="header" style="background-image: url(../imgs/background.png); height: 900px;">
             <div class="header__nav">
-                <a href="../main.html" class="header__logo-link">
+                <a href="../index.html" class="header__logo-link">
                     <img src="../imgs/logo.png" alt="Liro Дневник" class="logo">
                 </a>
                 <nav class="header__nav-bar">
@@ -46,7 +94,7 @@
                             <a href="./interesting.html" class="header__nav-link">Интересное</a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="#" class="header__nav-link">Мои задачи</a>
+                            <a href="./tasks.html" class="header__nav-link">Мои задачи</a>
                         </li>
                         <li class="header__nav-item">
                             <button class="header__nav-link">Выйти</button>
@@ -82,166 +130,6 @@
                 <button class="main__add-card">
                     Добавить карточку
                 </button>
-                <div class="main__card books">
-                    <img src="../imgs/card_img1.png" alt="" class="main__card-img">
-                    <div class="main__card-item">
-                        <p class="main__card-author">Кейт Феррацци</p>
-                        <h1 class="main__card-name">Никогда не  ешьте в одиночку</h1>
-                    </div>
-                    <div class="main__card-btn">
-                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
-                    </div>  
-                </div>
-                <div class="main__card books">
-                    <img src="../imgs/card_img2.png" alt="" class="main__card-img">
-                    <div class="main__card-item">
-                        <p class="main__card-author">Джордж Клейсон</p>
-                        <h1 class="main__card-name">Самый богатый человек в Вавилоне</h1>
-                    </div>
-                    <div class="main__card-btn">
-                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
-                    </div>
-                </div>
-                <div class="main__card books">
-                    <img src="../imgs/card_img1.png" alt="" class="main__card-img">
-                    <div class="main__card-item">
-                        <p class="main__card-author">Кейт Феррацци</p>
-                        <h1 class="main__card-name">Никогда не  ешьте в одиночку</h1>
-                    </div>
-                    <div class="main__card-btn">
-                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
-                    </div>
-                </div>
-                <div class="main__card books">
-                    <img src="../imgs/card_img3.png" alt="" class="main__card-img">
-                    <div class="main__card-item">
-                        <p class="main__card-author">Джон Кехо</p>
-                        <h1 class="main__card-name">Подсознание может всё!</h1>
-                    </div>
-                    <div class="main__card-btn">
-                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
-                    </div>
-                </div>
-                <div class="main__card books">
-                    <img src="../imgs/card_img2.png" alt="" class="main__card-img">
-                    <div class="main__card-item">
-                        <p class="main__card-author">Джордж Клейсон</p>
-                        <h1 class="main__card-name">Самый богатый человек в Вавилоне</h1>
-                    </div>
-                    <div class="main__card-btn">
-                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
-                    </div>
-                </div>
-                <div class="main__card books">
-                    <img src="../imgs/card_img2.png" alt="" class="main__card-img">
-                    <div class="main__card-item">
-                        <p class="main__card-author">Джордж Клейсон</p>
-                        <h1 class="main__card-name">Самый богатый человек в Вавилоне</h1>
-                    </div>
-                    <div class="main__card-btn">
-                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
-                    </div>
-                </div>
-                <div class="main__card books">
-                    <img src="../imgs/card_img1.png" alt="" class="main__card-img">
-                    <div class="main__card-item">
-                        <p class="main__card-author">Кейт Феррацци</p>
-                        <h1 class="main__card-name">Никогда не  ешьте в одиночку</h1>
-                    </div>
-                    <div class="main__card-btn">
-                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
-                    </div>
-                </div>
-                <div class="main__card books">
-                    <img src="../imgs/card_img1.png" alt="" class="main__card-img">
-                    <div class="main__card-item">
-                        <p class="main__card-author">Кейт Феррацци</p>
-                        <h1 class="main__card-name">Никогда не  ешьте в одиночку</h1>
-                    </div>
-                    <div class="main__card-btn">
-                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
-                    </div>
-                </div>
-                <div class="main__card books">
-                    <img src="../imgs/card_img1.png" alt="" class="main__card-img">
-                    <div class="main__card-item">
-                        <p class="main__card-author">Кейт Феррацци</p>
-                        <h1 class="main__card-name">Никогда не  ешьте в одиночку</h1>
-                    </div>
-                    <div class="main__card-btn">
-                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
-                    </div>  
-                </div>
-                <div class="main__card books">
-                    <img src="../imgs/card_img2.png" alt="" class="main__card-img">
-                    <div class="main__card-item">
-                        <p class="main__card-author">Джордж Клейсон</p>
-                        <h1 class="main__card-name">Самый богатый человек в Вавилоне</h1>
-                    </div>
-                    <div class="main__card-btn">
-                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
-                    </div>
-                </div>
-                <div class="main__card books">
-                    <img src="../imgs/card_img1.png" alt="" class="main__card-img">
-                    <div class="main__card-item">
-                        <p class="main__card-author">Кейт Феррацци</p>
-                        <h1 class="main__card-name">Никогда не  ешьте в одиночку</h1>
-                    </div>
-                    <div class="main__card-btn">
-                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
-                    </div>
-                </div>
-                <div class="main__card books">
-                    <img src="../imgs/card_img3.png" alt="" class="main__card-img">
-                    <div class="main__card-item">
-                        <p class="main__card-author">Джон Кехо</p>
-                        <h1 class="main__card-name">Подсознание может всё!</h1>
-                    </div>
-                    <div class="main__card-btn">
-                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
-                    </div>
-                </div>
-                <div class="main__card books">
-                    <img src="../imgs/card_img2.png" alt="" class="main__card-img">
-                    <div class="main__card-item">
-                        <p class="main__card-author">Джордж Клейсон</p>
-                        <h1 class="main__card-name">Самый богатый человек в Вавилоне</h1>
-                    </div>
-                    <div class="main__card-btn">
-                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
-                    </div>
-                </div>
-                <div class="main__card books">
-                    <img src="../imgs/card_img2.png" alt="" class="main__card-img">
-                    <div class="main__card-item">
-                        <p class="main__card-author">Джордж Клейсон</p>
-                        <h1 class="main__card-name">Самый богатый человек в Вавилоне</h1>
-                    </div>
-                    <div class="main__card-btn">
-                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
-                    </div>
-                </div>
-                <div class="main__card books">
-                    <img src="../imgs/card_img1.png" alt="" class="main__card-img">
-                    <div class="main__card-item">
-                        <p class="main__card-author">Кейт Феррацци</p>
-                        <h1 class="main__card-name">Никогда не  ешьте в одиночку</h1>
-                    </div>
-                    <div class="main__card-btn">
-                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
-                    </div>
-                </div>
-                <div class="main__card books">
-                    <img src="../imgs/card_img1.png" alt="" class="main__card-img">
-                    <div class="main__card-item">
-                        <p class="main__card-author">Кейт Феррацци</p>
-                        <h1 class="main__card-name">Никогда не  ешьте в одиночку</h1>
-                    </div>
-                    <div class="main__card-btn">
-                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
-                    </div>
-                </div>
             </div>
         </main>
         
@@ -252,18 +140,18 @@
                 <h1 class="footer__heading">Карта</h1>
                 <ul class="footer__nav-links">
                     <li class="footer__nav-item">
-                        <a href="../main.html" class="footer__nav-link">главная</a>
+                        <a href="../index.html" class="footer__nav-link">главная</a>
                     </li>
                     <li class="footer__nav-item">
                         <a href="./interesting.html" class="footer__nav-link">интересное</a>
                     </li>
                     <li class="footer__nav-item">
-                        <a href="#" class="footer__nav-link">мои задачи</a>
+                        <a href="./tasks.html" class="footer__nav-link">мои задачи</a>
                     </li>
                 </ul>
             </div>
             <div class="footer__logo-liro">
-                <a href="../main.html" class="footer__logo-link">
+                <a href="../index.html" class="footer__logo-link">
                     <img src="../imgs/dark_logo.png" alt="Liro Дневник" class="logo">
                 </a>
                 <p class="footer__liro">© Liro, 2023</p>
@@ -272,7 +160,7 @@
                 <h1 class="footer__heading">Контакты</h1>
                 <ul class="footer__social">
                     <li class="footer__item">
-                        <a href="" class="footer__contact">
+                        <a href="https://vk.com/cercatrovame" class="footer__contact">
                             <img src="../imgs/vk.png" alt="" class="footer__img">
                         </a>
                     </li>
@@ -289,8 +177,6 @@
                 </ul>
             </div>
         </footer>
-    </div>
-
     </div>
 </body>
 </html>

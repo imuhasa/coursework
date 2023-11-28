@@ -59,3 +59,7 @@
     background-color: #506A80;
     color: #A1D5FF;
 }
+.auth__text-bold:hover, .reg__text-bold:hover {
+    cursor: pointer;
+    color: black;
+}

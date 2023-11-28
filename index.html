@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Liro Дневник</title>
+    <link rel="stylesheet" href="./css/reg_auth.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/index.css">
+    <link rel="stylesheet" href="./css/footer.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="../js/script.js" type="module"></script>
+</head>
+<body>
+    <div class="modal__wrapper"></div>
+    <div class="reg__wrapper">
+        <h1 class="reg__heading">Регистрация</h1>
+        <form action="" class="reg__form">
+            <label for="name" class="reg__form-label">
+                ФИО
+                <input class="reg__form-input" type="text" name="fio" placeholder="Введите фамилию, имя и отчество">
+            </label>
+            <label for="name" class="reg__form-label">
+                Логин
+                <input class="reg__form-input" type="text" name="login" placeholder="Введите логин">
+            </label>
+            <label for="name" class="reg__form-label">
+                Пароль
+                <input class="reg__form-input" type="text" name="password" placeholder="Введите пароль">
+            </label>
+        </form>
+        <button class="reg__sub-btn" type="submit">Зарегистрироваться</button>
+        <p class="reg__text">Вы уже есть у нас? <span class="reg__text-bold">Авторизоваться</span></p>
+    </div>
+    <div class="auth__wrapper">
+        <h1 class="auth__heading">Авторизация</h1>
+        <form action="" class="auth__form">
+            <label for="name" class="auth__form-label">
+                Логин
+                <input class="auth__form-input" type="text" name="fio" placeholder="Введите логин">
+            </label>
+            <label for="name" class="auth__form-label">
+                Пароль
+                <input class="auth__form-input" type="text" name="password" placeholder="Введите пароль">
+            </label>
+        </form>
+        <button class="auth__sub-btn" type="submit">Войти</button>
+        <p class="auth__text">Нет аккаунта? <span class="auth__text-bold">Зарегистрироваться</span></p>
+    </div>
+    <div class="wrapper">
+        
+
+        <!-- HEADER -->
+
+        <header class="header">
+            <div class="header__nav">
+                <a href="./index.html" class="header__logo-link">
+                    <img src="../imgs/logo.png" alt="Liro Дневник" class="logo">
+                </a>
+                <nav class="header__nav-bar">
+                    <ul class="header__nav-links">
+                        <li class="header__nav-item">
+                            <a disabled href="./pages/interesting.html" class="header__nav-link">интересное</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a href="./pages/tasks.html" class="header__nav-link">мои задачи</a>
+                        </li>
+                        <li class="header__nav-item">
+                            <button class="header__nav-link registration">регистрация</button>
+                        </li>
+                        <li class="header__nav-item">
+                            <button class="header__nav-link authorization">вход</button>
+                            <!-- <a href="#" class="header__nav-link">вход</a> -->
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header__hello-frame">
+                <h1 class="hello-frame__h1">Дневник</h1>
+                <h2 class="hello-frame__h2">личностного роста</h2>
+                <p class="hello-frame__p">Помощник в достижении целей</p>
+                <div class="arrow-7">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN -->
+
+        <main class="main">
+            <div class="main__blocks">
+                <div class="main__block">
+                    <div class="main__block-image" style="background-image: url(./imgs/image_one.png);"></div>
+                    <div class="main__block-heading">
+                        <h1 class="main__heading">Для чего мы?</h1>
+                        <p class="main__text">Каждый человек, встающий на путь осознания себя в жизни, задумывается о том, чтобы начать развивать свой разум, впитывать знания как губка.
+                            Для этого он начинает искать информацию в различных её видах и сферах жизни и, собственно, развиваться.
+                            Но как помочь ему отслеживать всё, что он успел узнать, прочесть или увидеть?
+                            Дать ему среду, то место, где собирается большой пласт полезных и интересных ему знаний, дать ему возможность записать всё, что он впитывал в себя!</p>
+                    </div>
+                </div>
+                <div class="main__block">
+                    <div class="main__block-heading">
+                        <h1 class="main__heading" style="margin-left: 0;">Твой путь</h1>
+                        <p class="main__text" style="margin-left: 0;">Поэтому мы сделали этот сервис специально для тебя!
+                            Мы готовы дать тебе возможность поставить достижимые цели, которые ты сможешь отслеживать и контролировать на нашем сайте.
+                            Переходи во вкладку “Мои задачи” и начинай совершенствовать себя!
+                            Не упускай возможность развиваться вместе с нами!</p>
+                    </div>
+                    <div class="main__block-image" style="background-image: url(./imgs/image_two.png); margin-left: 50px;">
+                        <h1 class="main__heading" style="margin-left: 60px;">Мои задачи</h1>
+                        <p class="main__text" style="width: 270px; margin-left: 60px;">Ставь, управляй и достигай поставленных целей. Твои мечты ждут!</p>
+                        <div class="main__link-wrapper">
+                            <a href="./pages/tasks.html" class="main__nav-link" style="margin-left: 60px;">перейти</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="main__block">
+                    <div class="main__block-image" style="background-image: url(./imgs/image_three.png);">
+                        <h1 class="main__heading">Интересное</h1>
+                        <p class="main__text" style="width: 270px;">Подборка из достойных
+                            внимания книг, людей. Всего, что понравится тебе!</p>
+                        <div class="main__link-wrapper">
+                            <a href="./pages/interesting.html" class="main__nav-link" style="margin-left: 60px;">перейти</a>
+                        </div>
+                    </div>
+                    <div class="main__block-heading">
+                        <h1 class="main__heading">Еще кое-что</h1>
+                        <p class="main__text">Что-бы разбавить твои личные цели чем-то ещё и придать твоему воображению вдохновения на постановку новых задач мы предлагаем посмотреть тебе каталог “Интересное”.
+                            В нем ты найдешь то, что обычно могло уйти от твоего внимания.
+                            Расширяй свой кругозор, мы рады помочь!</p>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <!-- FOOTER -->
+
+        <footer class="footer">
+            <div class="footer__nav">
+                <h1 class="footer__heading">Карта</h1>
+                <ul class="footer__nav-links">
+                    <li class="footer__nav-item">
+                        <a href="./index.html" class="footer__nav-link">главная</a>
+                    </li>
+                    <li class="footer__nav-item">
+                        <a href="./pages/interesting.html" class="footer__nav-link">интересное</a>
+                    </li>
+                    <li class="footer__nav-item">
+                        <a href="./pages/tasks.html" class="footer__nav-link">мои задачи</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="footer__logo-liro">
+                <a href="./index.html" class="footer__logo-link">
+                    <img src="../imgs/dark_logo.png" alt="Liro Дневник" class="logo">
+                </a>
+                <p class="footer__liro">© Liro, 2023</p>
+            </div>
+            <div class="footer__contacts">
+                <h1 class="footer__heading">Контакты</h1>
+                <ul class="footer__social">
+                    <li class="footer__item">
+                        <a href="https://vk.com/cercatrovame" class="footer__contact">
+                            <img src="../imgs/vk.png" alt="" class="footer__img">
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="https://t.me/AmNyamsLitClub" class="footer__contact">
+                            <img src="../imgs/tg.png" alt="" class="footer__img">
+                        </a>
+                    </li>
+                    <li class="footer__item">
+                        <a href="https://github.com/imuhasa/coursework" class="footer__contact">
+                            <img src="../imgs/github.png" alt="" class="footer__img">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
