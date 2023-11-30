@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Liro Интересное</title>
     <script src="../js/script.js" type="module"></script>
+    <link rel="stylesheet" href="../css/reg_auth.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/interesting.css">
     <link rel="stylesheet" href="../css/footer.css">
@@ -15,14 +16,48 @@
 </head>
 <body>     
     <div class="modal__wrapper"></div>  
-    
+    <div class="reg__wrapper">
+        <h1 class="reg__heading">Регистрация</h1>
+        <form action="" class="reg__form">
+            <label class="reg__form-label">
+                ФИО
+                <input class="reg__form-input fio" type="text" name="fio" placeholder="Введите фамилию, имя и отчество">
+            </label>
+            <label class="reg__form-label">
+                Логин
+                <input class="reg__form-input reg-login" type="text" name="login" placeholder="Введите логин">
+            </label>
+            <label class="reg__form-label">
+                Пароль
+                <input class="reg__form-input reg-password" type="text" name="password" placeholder="Введите пароль">
+            </label>
+        </form>
+        <button class="reg__sub-btn" type="submit">Зарегистрироваться</button>
+        <p class="reg__text">Вы уже есть у нас? <span class="reg__text-bold">Авторизоваться</span></p>
+    </div>
+    <div class="auth__wrapper">
+        <h1 class="auth__heading">Авторизация</h1>
+        <form action="" class="auth__form">
+            <label class="auth__form-label">
+                Логин
+                <input class="auth__form-input login" type="text" name="login" placeholder="Введите логин">
+            </label>
+            <label class="auth__form-label">
+                Пароль
+                <input class="auth__form-input password" type="text" name="password" placeholder="Введите пароль">
+            </label>
+        </form>
+        <p class="submit-block__log-reg-error-text log-or-pswd-error">Войти в учетную запись</p>
+        <button class="auth__sub-btn" type="submit">Войти</button>
+        <p class="auth__text">Нет аккаунта? <span class="auth__text-bold">Зарегистрироваться</span></p>
+    </div>
     <div class="main__card-modal-page">
         <div class="main__card-modal-window">
             <img src="/imgs/no_image.png" alt="" class="main__modal-image">
             <div class="main__modal-item">
-                <h1 class="main__modal-heading">Кейт Феррацци</h1>
-                <h3 class="main__modal-name">Никогда не ешьте в одиночку</h3>
-                <p class="main__modal-text">Учитывая ключевые сценарии поведения, глубокий уровень погружения влечет за собой процесс внедрения и модернизации дальнейших направлений развития. Являясь всего лишь частью общей картины, элементы политического процесса, превозмогая сложившуюся непростую экономическую ситуацию, призваны к ответу. В своём стремлении повысить качество жизни, они забывают, что синтетическое тестирование позволяет оценить значение поставленных обществом задач.</p>
+                <h1 class="main__modal-heading"></h1>
+                <h3 class="main__modal-name"></h3>
+                <p class="main__modal-text"></p>
             </div>
         </div>
         <button class="main__modal-btn">Добавить к себе</button>
@@ -97,7 +132,13 @@
                             <a href="./tasks.html" class="header__nav-link">Мои задачи</a>
                         </li>
                         <li class="header__nav-item">
-                            <button class="header__nav-link">Выйти</button>
+                            <button class="header__nav-link registration">Регистрация</button>
+                        </li>
+                        <li class="header__nav-item">
+                            <button class="header__nav-link authorization">Вход</button>
+                        </li>
+                        <li class="header__nav-item">
+                            <button class="header__nav-link logout-btn">Выйти</button>
                         </li>
                     </ul>
                 </nav>

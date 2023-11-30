@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Liro задачи</title>
+    <link rel="stylesheet" href="../css/reg_auth.css">
     <link rel="stylesheet" href="../css/reset.css">
     <link rel="stylesheet" href="../css/header.css">
     <link rel="stylesheet" href="../css/tasks.css">
@@ -13,43 +14,83 @@
 </head>
 <body>
     <div class="modal__wrapper"></div>
-    <div class="modal__new-task">
+    <div class="reg__wrapper">
+        <h1 class="reg__heading">Регистрация</h1>
+        <form action="" class="reg__form">
+            <label class="reg__form-label">
+                ФИО
+                <input class="reg__form-input fio" type="text" name="fio" placeholder="Введите фамилию, имя и отчество">
+            </label>
+            <label class="reg__form-label">
+                Логин
+                <input class="reg__form-input reg-login" type="text" name="login" placeholder="Введите логин">
+            </label>
+            <label class="reg__form-label">
+                Пароль
+                <input class="reg__form-input reg-password" type="text" name="password" placeholder="Введите пароль">
+            </label>
+        </form>
+        <button class="reg__sub-btn" type="submit">Зарегистрироваться</button>
+        <p class="reg__text">Вы уже есть у нас? <span class="reg__text-bold">Авторизоваться</span></p>
+    </div>
+    <div class="auth__wrapper">
+        <h1 class="auth__heading">Авторизация</h1>
+        <form action="" class="auth__form">
+            <label class="auth__form-label">
+                Логин
+                <input class="auth__form-input login" type="text" name="login" placeholder="Введите логин">
+            </label>
+            <label class="auth__form-label">
+                Пароль
+                <input class="auth__form-input password" type="text" name="password" placeholder="Введите пароль">
+            </label>
+        </form>
+        <p class="submit-block__log-reg-error-text log-or-pswd-error">Войти в учетную запись</p>
+        <button class="auth__sub-btn" type="submit">Войти</button>
+        <p class="auth__text">Нет аккаунта? <span class="auth__text-bold">Зарегистрироваться</span></p>
+    </div>
+    <form class="modal__new-task">
         <h1 class="modal__new-heading">Новая задача</h1>
         <label class="modal__task-name-label">
-            <input type="text" placeholder="Название задачи:" name="new-task-name" class="modal__task-input">
+            <input type="text" placeholder="Название задачи:" name="newTaskName" class="modal__task-input">
         </label>
         <label class="modal__task-description-label">
-            <input type="text" placeholder="Описание:" name="new-task-desc" class="modal__task-input">
+            <input type="text" placeholder="Описание:" name="newTaskDesc" class="modal__task-input">
         </label>
         <div class="modal__check-list">
             <p class="modal__check-heading">Чек-лист</p>
             <ul class="modal__new-task-list">
                 <li class="modal__new-task-item">
                     <div class="modal__item-wrapper">
-                        <label class="modal__item-label">
-                            <input type="checkbox" class="modal__item-checkbox" name="modal__item-checkbox">
+                        <input type="checkbox" class="modal__item-checkbox">
+                        <input type="text" class="modal__item-name" name="modalTaskName" placeholder="Подзадача...">
+
+                        <!-- <label class="modal__item-label">
+                            
                         </label>
-                        <p class="modal__item-text">Прочесть главу</p>
+                        <label class="modal__item-text">
+                            
+                        </label> -->
                     </div>
                     <button class="modal__del-btn">
                         <img src="../imgs/delIcon.png" alt="удалить задачу" class="del-icon">
                     </button>
                 </li>
             </ul>
-            <button class="main__add-img"></button>
+            <div class="main__check-img"></div>
             <p class="main__add-img-text">Добавить элемент</p>
         </div>
         <div class="main__buttons">
             <button class="main__btn-save button">сохранить</button>
         </div>
-    </div>
+    </form>
     <div class="modal__edit-task">
         <h1 class="modal__new-heading">Редактирование</h1>
         <label class="modal__task-name-label">
-            <input type="text" placeholder="Название задачи:" name="new-task-name" class="modal__task-input">
+            <input type="text" placeholder="Название задачи:" name="newTaskName" class="modal__task-input">
         </label>
         <label class="modal__task-description-label">
-            <input type="text" placeholder="Описание:" name="new-task-desc" class="modal__task-input">
+            <input type="text" placeholder="Описание:" name="newTaskDesc" class="modal__task-input">
         </label>
         <div class="modal__check-list">
             <p class="modal__check-heading">Чек-лист</p>
@@ -66,7 +107,7 @@
                     </button>
                 </li>
             </ul>
-            <button class="main__add-img"></button>
+            <button class="main__check-img"></button>
             <p class="main__add-img-text">Добавить элемент</p>
         </div>
         <div class="main__buttons">
@@ -93,7 +134,13 @@
                             <a href="#" class="header__nav-link">Мои задачи</a>
                         </li>
                         <li class="header__nav-item">
-                            <button class="header__nav-link">Выйти</button>
+                            <button class="header__nav-link registration">Регистрация</button>
+                        </li>
+                        <li class="header__nav-item">
+                            <button class="header__nav-link authorization">Вход</button>
+                        </li>
+                        <li class="header__nav-item">
+                            <button class="header__nav-link logout-btn">Выйти</button>
                         </li>
                     </ul>
                 </nav>
@@ -136,17 +183,7 @@
         <main class="main">
             <h1 class="main__heading">Избранное</h1>
             <div class="main__favorites-wrapper">
-                <div class="main__card books">
-                    <img src="../imgs/card_img1.png" alt="" class="main__card-img">
-                    <div class="main__card-item">
-                        <p class="main__card-author">Кейт Феррацци</p>
-                        <h1 class="main__card-name">Никогда не  ешьте в одиночку</h1>
-                    </div>
-                    <div class="main__card-btn">
-                        <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
-                    </div>
-                </div>
-                <div class="main__card books">
+                <!-- <div class="main__card books">
                     <img src="../imgs/card_img2.png" alt="" class="main__card-img">
                     <div class="main__card-item">
                         <p class="main__card-author">Джордж Клейсон</p>
@@ -165,7 +202,7 @@
                     <div class="main__card-btn">
                         <img src="../imgs/like_inactive.png" alt="" class="main__card-like">
                     </div>
-                </div>
+                </div> -->
             </div>
         </main>
         

@@ -53,7 +53,7 @@
     
 }
 
-.main__card-like-active {
+.active {
     background-image: url(../imgs/like_active.png);
 }
 
@@ -132,7 +132,7 @@
 
 .main__card-modal-page {
     flex-direction: column;
-    align-items: end;
+    
     position: fixed;
     top: 5%;
     z-index: 3;
@@ -183,7 +183,7 @@
 }
 .main__modal-btn {
     padding: 10px 34px;
-    margin-right: 117px;
+    margin: auto;
     margin-bottom: 100px;
     border: none;
     border-radius: 5px;

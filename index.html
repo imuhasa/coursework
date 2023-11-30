@@ -18,17 +18,17 @@
     <div class="reg__wrapper">
         <h1 class="reg__heading">Регистрация</h1>
         <form action="" class="reg__form">
-            <label for="name" class="reg__form-label">
+            <label class="reg__form-label">
                 ФИО
-                <input class="reg__form-input" type="text" name="fio" placeholder="Введите фамилию, имя и отчество">
+                <input class="reg__form-input fio" type="text" name="fio" placeholder="Введите фамилию, имя и отчество">
             </label>
-            <label for="name" class="reg__form-label">
+            <label class="reg__form-label">
                 Логин
-                <input class="reg__form-input" type="text" name="login" placeholder="Введите логин">
+                <input class="reg__form-input reg-login" type="text" name="login" placeholder="Введите логин">
             </label>
-            <label for="name" class="reg__form-label">
+            <label class="reg__form-label">
                 Пароль
-                <input class="reg__form-input" type="text" name="password" placeholder="Введите пароль">
+                <input class="reg__form-input reg-password" type="text" name="password" placeholder="Введите пароль">
             </label>
         </form>
         <button class="reg__sub-btn" type="submit">Зарегистрироваться</button>
@@ -37,15 +37,16 @@
     <div class="auth__wrapper">
         <h1 class="auth__heading">Авторизация</h1>
         <form action="" class="auth__form">
-            <label for="name" class="auth__form-label">
+            <label class="auth__form-label">
                 Логин
-                <input class="auth__form-input" type="text" name="fio" placeholder="Введите логин">
+                <input class="auth__form-input login" type="text" name="login" placeholder="Введите логин">
             </label>
-            <label for="name" class="auth__form-label">
+            <label class="auth__form-label">
                 Пароль
-                <input class="auth__form-input" type="text" name="password" placeholder="Введите пароль">
+                <input class="auth__form-input password" type="text" name="password" placeholder="Введите пароль">
             </label>
         </form>
+        <p class="submit-block__log-reg-error-text log-or-pswd-error">Войти в учетную запись</p>
         <button class="auth__sub-btn" type="submit">Войти</button>
         <p class="auth__text">Нет аккаунта? <span class="auth__text-bold">Зарегистрироваться</span></p>
     </div>
@@ -62,17 +63,19 @@
                 <nav class="header__nav-bar">
                     <ul class="header__nav-links">
                         <li class="header__nav-item">
-                            <a disabled href="./pages/interesting.html" class="header__nav-link">интересное</a>
+                            <a disabled href="./pages/interesting.html" class="header__nav-link">Интересное</a>
                         </li>
                         <li class="header__nav-item">
-                            <a href="./pages/tasks.html" class="header__nav-link">мои задачи</a>
+                            <a href="./pages/tasks.html" class="header__nav-link">Мои задачи</a>
                         </li>
                         <li class="header__nav-item">
-                            <button class="header__nav-link registration">регистрация</button>
+                            <button class="header__nav-link registration">Регистрация</button>
                         </li>
                         <li class="header__nav-item">
-                            <button class="header__nav-link authorization">вход</button>
-                            <!-- <a href="#" class="header__nav-link">вход</a> -->
+                            <button class="header__nav-link authorization">Вход</button>
+                        </li>
+                        <li class="header__nav-item">
+                            <button class="header__nav-link logout-btn">Выйти</button>
                         </li>
                     </ul>
                 </nav>
